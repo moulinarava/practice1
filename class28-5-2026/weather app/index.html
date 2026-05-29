@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(to right,#4facfe,#00f2fe);
+    }
+
+    .container{
+      width:350px;
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h1{
+      margin-bottom:20px;
+      color:#333;
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      border:2px solid #4facfe;
+      border-radius:10px;
+      outline:none;
+      font-size:16px;
+      margin-bottom:15px;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      border:none;
+      background:#4facfe;
+      color:white;
+      font-size:16px;
+      border-radius:10px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#00c6fb;
+    }
+
+    .weather{
+      margin-top:20px;
+      display:none;
+    }
+
+    .temp{
+      font-size:45px;
+      font-weight:bold;
+      color:#333;
+    }
+
+    .city{
+      font-size:28px;
+      margin-top:10px;
+      color:#555;
+    }
+
+    .desc{
+      margin-top:10px;
+      font-size:20px;
+      color:#777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Weather App</h1>
+
+    <input type="text" id="cityInput" placeholder="Enter city name">
+
+    <button onclick="getWeather()">Search</button>
+
+    <div class="weather" id="weatherBox">
+      <div class="temp" id="temp">30°C</div>
+      <div class="city" id="city">Hyderabad</div>
+      <div class="desc" id="desc">Sunny</div>
+    </div>
+  </div>
+
+  <script>
+
+    async function getWeather(){
+
+      const city = document.getElementById("cityInput").value;
+
+      const apiKey = "YOUR_API_KEY";
+
+      const url =
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      try{
+
+        const response = await fetch(url);
+
+        const data = await response.json();
+
+        document.getElementById("weatherBox").style.display = "block";
+
+        document.getElementById("temp").innerHTML =
+        Math.round(data.main.temp) + "°C";
+
+        document.getElementById("city").innerHTML =
+        data.name;
+
+        document.getElementById("desc").innerHTML =
+        data.weather[0].description;
+
+      }
+      catch(error){
+        alert("City not found");
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
