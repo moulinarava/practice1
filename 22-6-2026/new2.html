@@ -1,0 +1,40 @@
+<button id="btn">Click</button>
+
+<script>
+document.getElementById("btn").addEventListener("click", () => {
+    console.log("Button Clicked");
+});
+</script>
+
+<input type="text" id="name">
+
+<script>
+document.getElementById("name").addEventListener("input", (e) => {
+    console.log(e.target.value);
+});
+</script>
+
+<form id="myForm">
+    <input type="text" required>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("Form Submitted");
+});
+</script>
+
+<select id="city">
+    <option>Hyderabad</option>
+    <option>Chennai</option>
+    <option>Bangalore</option>
+</select>
+
+<script>
+document.getElementById("city").addEventListener("change", (e) => {
+    console.log(e.target.value);
+});
+</script>
+

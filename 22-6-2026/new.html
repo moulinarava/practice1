@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="parent" style="padding:30px; background:lightblue;">
+    Parent
+    <button id="child">Click Me</button>
+</div>
+
+<script>
+document.getElementById("parent").addEventListener("click", function () {
+    console.log("Parent Clicked");
+});
+
+document.getElementById("child").addEventListener("click", function () {
+    console.log("Button Clicked");
+});
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="parent" style="padding:30px; background:lightgreen;">
+    Parent
+    <button id="child">Click Me</button>
+</div>
+
+<script>
+document.getElementById("parent").addEventListener("click", function () {
+    console.log("Parent Capturing");
+}, true);
+
+document.getElementById("child").addEventListener("click", function () {
+    console.log("Button Clicked");
+}, true);
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+
+<button id="addBtn">Add Item</button>
+
+<script>
+let count = 3;
+
+document.getElementById("addBtn").addEventListener("click", () => {
+    let li = document.createElement("li");
+    li.textContent = "Item " + count++;
+    document.getElementById("list").appendChild(li);
+});
+
+document.getElementById("list").addEventListener("click", (event) => {
+    if (event.target.tagName === "LI") {
+        console.log(event.target.textContent);
+    }
+});
+</script>
+
+</body>
+</html>
+
