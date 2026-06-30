@@ -1,0 +1,137 @@
+/* Universal Selector */
+
+* {
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Element Selector */
+
+p {
+    color: blue;
+}
+
+/* Class Selector */
+
+.highlight {
+    color: green;
+    font-weight: bold;
+}
+
+/* ID Selector */
+
+#special {
+    color: red;
+    font-size: 20px;
+}
+
+/* Group Selector */
+
+h3,
+h4 {
+    color: purple;
+}
+
+/* Descendant Selector */
+
+div p {
+    background-color: lightyellow;
+}
+
+/* Child Selector */
+
+.parent > p {
+    color: orange;
+    font-size: 20px;
+}
+
+/* Adjacent Sibling Selector */
+
+h3 + p {
+    background-color: yellow;
+}
+
+/* General Sibling Selector */
+
+h4 ~ p {
+    color: brown;
+}
+
+/* Border Styles */
+
+.solid {
+    width: 250px;
+    border: 3px solid black;
+    padding: 15px;
+}
+
+.dashed {
+    width: 250px;
+    border: 3px dashed blue;
+    padding: 15px;
+}
+
+.dotted {
+    width: 250px;
+    border: 3px dotted red;
+    padding: 15px;
+}
+
+.rounded {
+    width: 250px;
+    border: 3px solid green;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* Background */
+
+.background {
+    width: 400px;
+    height: 200px;
+
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    color: white;
+    text-align: center;
+    line-height: 200px;
+}
+
+/* Width and Height */
+
+.fixed {
+    width: 300px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.percentage {
+    width: 80%;
+    height: 100px;
+    background-color: lightgreen;
+}
+
+.viewport {
+    width: 60vw;
+    height: 20vh;
+    background-color: pink;
+}
+
+.auto {
+    width: auto;
+    height: auto;
+    background-color: lightgray;
+    padding: 20px;
+}
+

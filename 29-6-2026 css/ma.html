@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mini Assignment</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        h2 {
+            color: darkgreen;
+            text-align: center;
+        }
+
+        .internal-box {
+            background-color: lightyellow;
+            border: 2px dashed green;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color:red; text-align:center;">
+        CSS Mini Assignment
+    </h1>
+
+    <h2>Internal CSS Example</h2>
+
+    <p class="internal-box">
+        This paragraph uses Internal CSS.
+    </p>
+
+    <hr>
+
+    <h2>CSS Selectors</h2>
+
+    <p>This paragraph uses Element Selector.</p>
+
+    <p class="highlight">
+        This paragraph uses Class Selector.
+    </p>
+
+    <p id="special">
+        This paragraph uses ID Selector.
+    </p>
+
+    <div>
+        <p>This paragraph uses Descendant Selector.</p>
+    </div>
+
+    <div class="parent">
+        <p>Direct Child Paragraph</p>
+
+        <section>
+            <p>Nested Paragraph</p>
+        </section>
+    </div>
+
+    <h3>Adjacent Sibling Heading</h3>
+
+    <p>Adjacent Sibling Paragraph</p>
+
+    <h4>General Sibling Heading</h4>
+
+    <p>General Sibling Paragraph One</p>
+
+    <p>General Sibling Paragraph Two</p>
+
+    <hr>
+
+    <h2>Border Styles</h2>
+
+    <div class="solid">Solid Border</div>
+
+    <div class="dashed">Dashed Border</div>
+
+    <div class="dotted">Dotted Border</div>
+
+    <div class="rounded">Rounded Border</div>
+
+    <hr>
+
+    <h2>Background Example</h2>
+
+    <div class="background">
+        Background Image
+    </div>
+
+    <hr>
+
+    <h2>Width and Height</h2>
+
+    <div class="fixed">
+        Fixed Width (300px)
+    </div>
+
+    <div class="percentage">
+        Width 80%
+    </div>
+
+    <div class="viewport">
+        Width 60vw Height 20vh
+    </div>
+
+    <div class="auto">
+        Auto Width and Height
+    </div>
+
+</body>
+</html>
