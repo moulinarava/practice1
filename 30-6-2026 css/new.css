@@ -1,0 +1,22 @@
+.block{
+    display:block;
+    background:skyblue;
+    margin:10px;
+    padding:10px;
+}
+
+.inline{
+    display:inline;
+    background:yellow;
+}
+
+.inline-block{
+    display:inline-block;
+    width:120px;
+    height:60px;
+    background:orange;
+}
+
+.hide{
+    display:none;
+}
